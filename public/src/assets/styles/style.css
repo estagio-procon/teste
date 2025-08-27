@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.8; /* Aumentar a legibilidade */
+    color: #333;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+.container{
+    padding-left: 100px;
+}
+header {
+    background-color: #b10701;
+    color: #fff;
+    height: 110px;
+    width: 100%;
+    font-size: 24px; /* Aumentar o tamanho da fonte */
+}
+header img {
+    height: 50px;
+    padding: 28px 10px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* Aumentar o arredondamento */
+    padding: 50px 50px; /* Aumentar o tamanho do botão */
+    font-size: 18px; /* Aumentar o tamanho da fonte */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: grid; /* Usar grid para layout em colunas */
+    grid-template-columns: repeat(3, 1fr); /* Três colunas de tamanhos iguais */
+    grid-template-rows: repeat(3, auto); /* Três linhas automáticas */
+    align-items: center; /* Centralizar conteúdo verticalmente */
+    gap: 20px; /* Espaço entre itens */
+}
+.button-container {
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* Aumentar o arredondamento */
+    padding: 50px 50px; /* Aumentar o tamanho do botão */
+    font-size: 18px; /* Aumentar o tamanho da fonte */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: grid; /* Usar grid para layout em colunas */
+    grid-template-columns: repeat(3, 1fr); /* Três colunas de tamanhos iguais */
+    grid-template-rows: repeat(3, auto); /* Três linhas automáticas */
+    align-items: center; /* Centralizar conteúdo verticalmente */
+    gap: 20px; /* Espaço entre itens */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button img {
+    width: 20px; /* Definir largura da imagem */
+    height: 20px; /* Definir altura da imagem */
+}

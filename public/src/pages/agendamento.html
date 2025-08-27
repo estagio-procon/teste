@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agendamento – PROCON MA (Demo Front‑end)</title>
+  <meta name="description"
+    content="Protótipo funcional de interface de agendamento no estilo PROCON MA, feito em HTML, CSS e JS puro." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/public/src/assets/styles/agendamento.css">
+</head>
+
+<body>
+  <header class="headerconfig"style="header: height: 300px;">
+    <div class="logo">
+        <img src="https://www.procon.ma.gov.br/wp-content/uploads/2023/05/cropped-LOGO-PROCON-11.png" alt="">
+    </div>
+</header>
+  <main class="container">
+    <section class="card" aria-labelledby="titulo-agendamento">
+      <h2 id="titulo-agendamento" style="margin-top:0">Agende seu atendimento</h2>
+      <!-- Stepper -->
+      <div class="steps" aria-label="Etapas do agendamento">
+        <div class="step active">
+          <div class="step-number">1</div>
+          <div>
+            <div class="step-title">Identificação</div><small class="muted">Seus dados</small>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div>
+            <div class="step-title">Agendamento</div><small class="muted">Unidade, serviço, data e hora</small>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div>
+            <div class="step-title">Confirmação</div><small class="muted">Resumo</small>
+          </div>
+        </div>
+      </div>
+      <form id="form-agendamento" novalidate>
+        <!-- Identificação -->
+        <div class="grid grid-2" style="margin-bottom:16px">
+          <div>
+            <label for="nome">Nome completo <span class="required" aria-hidden="true">*</span></label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Digite seu nome" />
+          </div>
+          <div>
+            <label for="cpf">CPF <span class="required" aria-hidden="true">*</span></label>
+            <input id="cpf" name="cpf" type="text" inputmode="numeric" placeholder="000.000.000-00" required
+            pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$" />
+            <small class="hint">Formato: 000.000.000-00</small>
+          </div>
+          <div>
+            <label for="email">E‑mail</label>
+            <input id="email" name="email" type="email" placeholder="seu@email.com" />
+          </div>
+          <div>
+            <label for="telefone">Telefone (WhatsApp)<span class="required" aria-hidden="true">*</span></label>
+            <input id="telefone" name="telefone" type="tel" placeholder="(98) 90000-0000" required />
+          </div>
+        </div>
+        <!-- Local e Serviço -->
+        <div class="grid grid-3" style="margin-bottom:16px">
+          <div>
+            <label for="municipio">Município <span class="required" aria-hidden="true">*</span></label>
+            <select id="municipio" name="municipio" required>
+              <option value="">Selecione…</option>
+              <option>São Luís</option>
+              <option>Imperatriz</option>
+              <option>Caxias</option>
+              <option>Bacabal</option>
+              <option>Pinheiro</option>
+            </select>
+          </div>
+          <div>
+            <label for="unidade">Unidade <span class="required" aria-hidden="true">*</span></label>
+            <select id="unidade" name="unidade" required>
+              <option value="">Selecione…</option>
+              <option>SEDE – São Luís</option>
+              <option>VIVA Cidadão – Shopping da Ilha</option>
+              <option>VIVA Cidadão – Imperatriz</option>
+              <option>Unidade Caxias</option>
+            </select>
+          </div>
+          <div>
+            <label for="servico">Serviço <span class="required" aria-hidden="true">*</span></label>
+            <select id="servico" name="servico" required>
+              <option value="">Selecione…</option>
+              <option>Atendimento/Registro de Reclamação</option>
+              <option>Renegociação</option>
+              <option>Orientação ao Consumidor</option>
+              <option>Fiscalização</option>
+            </select>
+          </div>
+        </div>
+        <!-- Data e Horário -->
+        <div class="grid grid-2" style="margin-bottom:16px">
+          <div>
+            <label for="data">Data <span class="required" aria-hidden="true">*</span></label>
+            <input id="data" name="data" type="date" required />
+          </div>
+          <div>
+            <label>Horário <span class="required" aria-hidden="true">*</span></label>
+            <div class="inline-times" id="lista-horarios" role="radiogroup" aria-label="Escolha um horário">
+              <!-- preenchido via JS -->
+            </div>
+            <input type="hidden" id="horario" name="horario" required />
+            <small class="hint">Selecione um horário disponível</small>
+          </div>
+        </div>
+        <!-- Observações / Documentos -->
+        <div style="margin-bottom:16px">
+          <label for="observacoes">Observações (opcional)</label>
+          <input id="observacoes" name="observacoes" type="text" placeholder="Descreva brevemente sua demanda" />
+        </div>
+        <!-- Ações -->
+        <div class="actions">
+          <button type="button" class="btn ghost" id="btn-limpar">Limpar</button>
+          <button type="submit" class="btn primary">Confirmar agendamento</button>
+        </div>
+        <!-- Resumo -->
+        <div id="resumo" class="summary" style="display:none; margin-top:16px" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+  <script src="/public/src/pages/agendamento.js"></script>
+</body>
+</html>
