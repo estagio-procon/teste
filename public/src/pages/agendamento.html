@@ -22,27 +22,7 @@
   <main class="container">
     <section class="card" aria-labelledby="titulo-agendamento">
       <h2 id="titulo-agendamento" style="margin-top:0">Agende seu atendimento</h2>
-      <!-- Stepper -->
-      <div class="steps" aria-label="Etapas do agendamento">
-        <div class="step active">
-          <div class="step-number">1</div>
-          <div>
-            <div class="step-title">Identificação</div><small class="muted">Seus dados</small>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <div>
-            <div class="step-title">Agendamento</div><small class="muted">Unidade, serviço, data e hora</small>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <div>
-            <div class="step-title">Confirmação</div><small class="muted">Resumo</small>
-          </div>
-        </div>
-      </div>
+     
       <form id="form-agendamento" novalidate>
         <!-- Identificação -->
         <div class="grid grid-2" style="margin-bottom:16px">
@@ -57,11 +37,11 @@
             <small class="hint">Formato: 000.000.000-00</small>
           </div>
           <div>
-            <label for="email">E‑mail</label>
+            <label for="email">E‑mail <span class="required" aria-hidden="true">*</span></label>
             <input id="email" name="email" type="email" placeholder="seu@email.com" />
           </div>
           <div>
-            <label for="telefone">Telefone (WhatsApp)<span class="required" aria-hidden="true">*</span></label>
+            <label for="telefone">Telefone<span class="required" aria-hidden="true">*</span></label>
             <input id="telefone" name="telefone" type="tel" placeholder="(98) 90000-0000" required />
           </div>
         </div>

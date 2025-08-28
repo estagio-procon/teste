@@ -9,7 +9,6 @@ cpf.addEventListener('input', () => {
   else r = v;
   cpf.value = r;
 });
-// Geração de horários dinâmicos (08:00–17:00 a cada 30min, pula almoço 12:00–14:00)
 const listaHorarios = document.getElementById('lista-horarios');
 const hiddenHorario = document.getElementById('horario');
 const inputData = document.getElementById('data');
@@ -50,7 +49,7 @@ function gerarHorarios(d) {
       push(h, m);
     }
   }
-  // Exemplo de bloqueio aleatório (simulando indisponibilidade)
+  // Exemplo de bloqueio aleatório
   const indisponiveis = new Set();
   for (let i = 0; i < 3; i++) {
     const idx = Math.floor(Math.random() * slots.length);
