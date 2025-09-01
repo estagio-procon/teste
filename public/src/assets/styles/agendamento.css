@@ -43,7 +43,7 @@ body {
 .container {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 24px
+    padding: 30px
 }
 header {
     background-color: #b10701;
@@ -108,7 +108,7 @@ header img {
 /* Grid */
 .grid {
     display: grid;
-    gap: 16px
+    gap: 20px
 }
 
 .grid-2 {
@@ -148,9 +148,10 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="date"],
+input[type="email-repeat"],
 select {
     width: 100%;
-    padding: 12px 14px;
+    padding: 14px 16px;
     border: 1px solid var(--line);
     border-radius: 12px;
     font: inherit;

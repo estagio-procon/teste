@@ -7,9 +7,29 @@ body {
     background-color: #f9f9f9;
     overflow-x: hidden;
 }
-.container{
-    padding-left: 100px;
+.container, .grande{
+margin: 0 auto;
+
 }
+.container{
+    padding-left: 500px;
+    margin: 70px;
+    
+}
+.container h1{
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+.container h2{
+    font-size: 25px;
+    margin-top: -15px;
+}
+.container p{
+    font-size: 1rem;
+   line-height: 1.6;      
+   margin-bottom: 1rem; 
+}
+
 header {
     background-color: #b10701;
     color: #fff;
@@ -59,4 +79,19 @@ button:hover {
 button img {
     width: 20px; /* Definir largura da imagem */
     height: 20px; /* Definir altura da imagem */
+}
+.folderconfig{
+    background-color: #b10701;
+    color: #fff;
+    height: 110px;
+    width: 100%;
+    margin-top: 1 70px;
+}
+
+.textofolder{
+    font-size: 12px;
+    margin: 0 auto;
+    padding-left: 500px;
+    padding-top: 8px;
+    margin: 70px;
 }
