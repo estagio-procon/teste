@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Usar a data atual no formato YYYY-MM-DD para comparação
-    const hoje = new Date();
+    const hoje = new Date();   
     const hojeFormatado = hoje.toISOString().split('T')[0];
 
     if (valor < hojeFormatado) {

@@ -47,7 +47,7 @@ button {
     color: #fff;
     border: none;
     border-radius: 8px; /* Aumentar o arredondamento */
-    padding: 50px 50px; /* Aumentar o tamanho do botão */
+    padding: 30px 30px; /* Aumentar o tamanho do botão */
     font-size: 18px; /* Aumentar o tamanho da fonte */
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -85,7 +85,7 @@ button img {
     color: #fff;
     height: 110px;
     width: 100%;
-    margin-top: 1 70px;
+    margin-top: 180px;
 }
 
 .textofolder{
